@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter/Inter-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'national_2bold';
+  src: url('./assets/fonts/national/national2-bold-webfont.woff2') format('woff2'),
+    url('./assets/fonts/national/national2-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'national_2extrabold';
+  src: url('./assets/fonts/national/national2-extrabold-webfont.woff2') format('woff2'),
+    url('./assets/fonts/national/national2-extrabold-webfont.woff') format('woff');
+}
+
+.font-inter {
+  font-family: 'Inter';
+}
+
+.font-national {
+  font-family: 'national_2bold';
+}
+
+.font-nationalBold {
+  font-family: 'national_2extrabold';
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+.first-acc-heading {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+  outline: none;
+  position: relative;
+  text-align: start;
+  border-bottom: 'none';
+  padding: 0;
+}
+
+.acc_heading:before {
+  border: none;
+  background: #000000;
+  content: '';
+  height: 3px;
+  margin-right: 4px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  width: 16px;
+}
+
+.acc_heading:after {
+  background: #000000;
+  content: '';
+  height: 3px;
+  margin-right: 4px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 16px;
+}
+
+.acc_heading.active:before {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
